@@ -8,18 +8,10 @@ int main(void)
 {
 	char ch;
 
-	for (ch = 'a'; ch < 'e'; ch++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(ch);
-	}
-
-	for (ch = 'd'; ch < 'q'; ch++)
-	{
-		putchar(ch);
-	}
-
-	for (ch = 'r'; ch < 'z'; ch++)
-	{
+		if (ch == 'q' || ch == 'e')
+			break;
 		putchar(ch);
 	}
 	putchar('\n');
