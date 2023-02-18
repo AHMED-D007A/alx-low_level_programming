@@ -11,6 +11,7 @@ int main(void)
 
 	while (l < 9)
 	{
+		i = 1;
 		while (i < 10)
 		{
 			putchar(l + '0');
