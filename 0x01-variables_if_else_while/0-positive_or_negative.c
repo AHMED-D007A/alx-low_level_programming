@@ -5,6 +5,12 @@
 
 /* betty style doc for function main goes there */
 
+/**
+*main - main fuction block
+*testing number type
+*Return: 0
+*/
+
 int main(void)
 {
 	int n;
