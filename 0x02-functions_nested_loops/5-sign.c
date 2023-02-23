@@ -9,7 +9,7 @@
 */
 int print_sign(int c)
 {
-	int r = (n > 0) ? 1 : (n < 0) ? -1 : 0;
+	int r = (c > 0) ? 1 : (c < 0) ? -1 : 0;
 
 	if (r == 1)
 	{
