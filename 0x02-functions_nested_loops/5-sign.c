@@ -4,8 +4,8 @@
 *print_sign - print the sign of any number
 *@c: the number used for checking
 *Return: 1 if positive
-*Return: 0 if zero
-*Return: -1 if negative
+*return: 0 if zero
+*return: -1 if negative
 */
 int print_sign(int c)
 {
@@ -17,7 +17,7 @@ int print_sign(int c)
 	}
 	else if (r == -1)
 	{
-	 	_putchar('-');
+		_putchar('-');
 	}
 	else
 	{
