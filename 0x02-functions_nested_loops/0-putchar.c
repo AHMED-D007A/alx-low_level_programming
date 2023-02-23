@@ -13,7 +13,7 @@ int main()
 	{
 	_putchar(m[i]);
 	}
-	_putchar("\n");
+	_putchar('\n');
 
 	return (0);
 }
