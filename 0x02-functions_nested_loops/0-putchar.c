@@ -4,7 +4,7 @@
 *main - main block
 *Return: 0
 */
-int main()
+int main(void)
 {
 	int i;
 	char *m = "_putchar";
