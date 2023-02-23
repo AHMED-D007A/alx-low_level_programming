@@ -10,9 +10,9 @@ int main()
 
 	for (i = 0; i < 8; i++)
 	{
-	putchar(m[i]);
+	_putchar(m[i]);
 	}
-	putchar("\n");
+	_putchar("\n");
 
 	return (0);
 }
