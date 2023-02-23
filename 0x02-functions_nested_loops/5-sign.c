@@ -5,7 +5,7 @@
 *@c: the number used for checking
 *Return: 1 if positive
 *return: 0 if zero
-*return: -1 if negative
+*_return: -1 if negative
 */
 int print_sign(int c)
 {
