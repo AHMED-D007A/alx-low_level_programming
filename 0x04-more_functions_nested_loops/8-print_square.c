@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_diagonal - print diagonal line of length @n lines
+ * print_square - print diagonal line of length @n lines
  * @n: the number of lines that contains the diagonal
  * Return: void
  */
