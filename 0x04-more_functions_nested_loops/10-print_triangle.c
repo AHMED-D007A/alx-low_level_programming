@@ -5,7 +5,7 @@
  * @size: the number of lines that contains the diagonal
  * Return: void
  */
-void print_triangel(int size)
+void print_triangle(int size)
 {
 	int i, j;
 
