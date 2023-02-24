@@ -17,8 +17,10 @@ void print_triangel(int size)
 
 	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < i; j++)
+		for (j = 0; j < (size - 1 - i); j++)
 			_putchar(' ');
+		for (l = 0; l < (i + 1); l++)
+			_putchar('#');
 		_putchar('\n');
 	}
 }
