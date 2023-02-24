@@ -2,7 +2,7 @@
 
 /**
  * print_square - print diagonal line of length @n lines
- * @n: the number of lines that contains the diagonal
+ * @size: the number of lines that contains the diagonal
  * Return: void
  */
 void print_square(int size)
