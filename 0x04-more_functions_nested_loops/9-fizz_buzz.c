@@ -15,8 +15,8 @@ int main(void)
 			printf("Buzz");
 		else if ((i % 3 != 0) && (i % 5 != 0))
 			printf("%d", i);
-	}
 		printf("%c", i < 100 ? ' ' : '\n');
+	}
 
 	return (0);
 }
