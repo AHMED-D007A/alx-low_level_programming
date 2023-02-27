@@ -17,7 +17,7 @@ void rev_string(char *s)
 
 	mid = len / 2;
 
-	for (i = 0; h < mid; h++)
+	for (h = 0; h < mid; h++)
 	{
 		char tmp;
 		int a = len - h - 1;
