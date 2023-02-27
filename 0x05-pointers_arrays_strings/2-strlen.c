@@ -6,9 +6,10 @@
 int _strlen(char *s)
 {
 	int i = 0;
-	char arr[] = *s;
+	char c = *s;
 
-	while (arr[i] != '\0')
+	while (c != '\0')
+		c = *++s
 		i++;
 
 	return (i);
