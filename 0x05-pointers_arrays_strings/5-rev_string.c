@@ -18,7 +18,7 @@ void rev_string(char *s)
 	--i;
 	while (i >= 0)
 	{
-		arr[] = (*(s + i--));
+		arr += (*(s + i--));
 	}
-	char *s = arr[];
+	char *s = arr;
 }
