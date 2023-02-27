@@ -6,7 +6,7 @@
 int _strlen(char *s)
 {
 	int i = 0;
-	int arr[] = *s;
+	int arr[] = s;
 
 	while (arr[i] != '\0')
 		i++;
