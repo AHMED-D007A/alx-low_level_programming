@@ -17,15 +17,15 @@ char *cap_string(char *str)
 			if (str[i + 1] > 96 && str[i + 1] < 123)
 				str[i + 1] -= 32;
 
-		if (str[i] == '?' || str[i] == '!' || str[i] == ';' || str[i] == ',')
+		else if (str[i] == '?' || str[i] == '!' || str[i] == ';' || str[i] == ',')
 			if (str[i + 1] > 96 && str[i + 1] < 123)
 				str[i + 1] -= 32;
 
-		if (str[i] == '"' || str[i] == '(' || str[i] == ')')
+		else if (str[i] == '"' || str[i] == '(' || str[i] == ')')
 			if (str[i + 1] > 96 && str[i + 1] < 123)
 				str[i + 1] -= 32;
 
-		if (str[i] == '{' || str[i] == '}')
+		else if (str[i] == '{' || str[i] == '}')
 			if (str[i + 1] > 96 && str[i + 1] < 123)
 				str[i + 1] -= 32;
 	}
