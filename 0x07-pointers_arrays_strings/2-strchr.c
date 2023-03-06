@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  *_strchr - locates a character @c in a string @s
  *@s: the reference to string
