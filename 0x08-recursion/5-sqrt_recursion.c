@@ -4,7 +4,7 @@
 *@n: the number
 *Return: the square root
 */
-int _sqrt_recursion(int n);
+int _sqrt_recursion(int n)
 {
 		return (help(n, 1));
 }
