@@ -4,6 +4,7 @@
 *@n: the number
 *Return: the square root
 */
+int halp(int c, int i);
 int _sqrt_recursion(int n)
 {
 		return (help(n, 1));
