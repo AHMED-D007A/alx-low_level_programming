@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
 *main - multiplies two numbers.
 *@argc: the number of ther numbers
@@ -9,8 +10,14 @@ int main(int argc, char **argv)
 {
 	int multi;
 
-	multi = atoi(argv[1]) * atoi(argv[2]);
-	printf("%d\n", multi);
+	if (argv[1] && argv[2])
+	{
+		multi = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", multi);
+		return (0);
+	}
+	else
+		printf("Error\n");
 
-	return (0);
+	return (1);
 }
