@@ -1,48 +1,44 @@
 #include <stdlib.h>
-#include <stdio.h>
-/**
- * _strlen - get the lenth of a string
- * @s: the string
- * Return: thr lenth
-*/
-unsigned int _strlen(char *s)
-{
-	unsigned int i;
 
-	for (i = 0; s[i] != '\0'; i++)
-		;
-
-	return (i);
-}
 /**
- * string_nconcat -  a function that concatenates two strings.
- * @s1: the first string
- * @s2: the second string
- * @n: the size of the memory
- * Return: concatinated strings
-*/
+ * string_nconcat - Concatenate two strings using n amount of s2
+ * @s1: First string
+ * @s2: String to add to end of s1
+ * @n: Amount of s2 to add to s1
+ *
+ * Return: pointer to new area in memory, NULL if it fails
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
-	int strlen1, i, c;
+	char *nstr, *empt;
+	unsigned int i, len, j;
+	unsigned int size;
 
+	len = 0;
+	empt = "";
 	if (s1 == NULL)
-		s1 = "";
+		s1 = empt;
 	if (s2 == NULL)
-		s2 = "";
-
-	strlen1 = (unsigned int)_strlen(s1);
-	p = malloc((strlen1 + n + 1) * sizeof(char));
-	if (p == NULL)
+		s2 = empt;
+	while (s1[len] != '\0')
+		len++;
+	size = (len + n) * sizeof(*nstr);
+	nstr = malloc(size + 1);
+	if (nstr == NULL)
 		return (NULL);
-	for (i = 0, c = 0; i < (strlen1 + n); i++)
+	i = 0;
+	while (i < size && s1[i] != '\0')
 	{
-		if (i < strlen1)
-			p[i] = s1[i];
-		else
-			p[i] = s2[c++];
+		nstr[i] = s1[i];
+		i++;
 	}
-	p[i] = '\0';
-
-	return (p);
+	j = 0;
+	while (i < size && s2[j] != '\0')
+	{
+		nstr[i] = s2[j];
+		i++;
+		j++;
+	}
+	nstr[i] = '\0';
+	return (nstr);
 }
