@@ -1,4 +1,19 @@
 #include <stdlib.h>
+#include <stdio.h>
+/**
+ * _strlen - get the lenth of a string
+ * @s: the string
+ * Return: thr lenth
+*/
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
+
+	return (i);
+}
 /**
  * string_nconcat -  a function that concatenates two strings.
  * @s1: the first string
@@ -9,10 +24,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int l, i, h;
-
-
-	ptr = malloc((n + h + 1) * sizeof(char));
+	unsigned int l, i, strlen;
 
 	if (ptr == NULL)
 		return (NULL);
@@ -22,8 +34,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	for (h = 0; s1[h] != '\0'; h++)
-		;
+	strlen = _strlen(s2);
+	ptr = malloc((n + strlen + 1) * sizeof(char));
 
 	for (i = 0; s[i] != '\0'; i++)
 		ptr[i] = s1[i];
