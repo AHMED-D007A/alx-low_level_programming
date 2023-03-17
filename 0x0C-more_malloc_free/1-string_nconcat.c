@@ -8,9 +8,13 @@
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *ptr = malloc(n * sizeof(char) + 1 + sizeof(s1));
-	unsigned int l, i;
+	char *ptr;
+	unsigned int l, i, h;
 
+	for (h = 0; s1[h] != '\0'; h++)
+		;
+
+	ptr = malloc(n * sizeof(char) + 1 + h);
 	if (ptr == NULL)
 		return (NULL);
 
