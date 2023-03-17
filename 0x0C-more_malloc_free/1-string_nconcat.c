@@ -5,7 +5,7 @@
  * @s: the string
  * Return: thr lenth
 */
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
 	unsigned int i;
 
