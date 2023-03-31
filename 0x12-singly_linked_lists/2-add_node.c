@@ -13,7 +13,7 @@ list_t *add_node(list **head, const char *str)
 	if (!head)
 		return (NULL);
 
-	n = calloc(1, sizeof(list_t));
+	n = malloc(sizeof(list_t));
 	if (!n)
 		return (NULL);
 	n->str = strdup(str);
