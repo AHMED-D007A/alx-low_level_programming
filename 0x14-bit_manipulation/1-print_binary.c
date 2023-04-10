@@ -7,22 +7,23 @@
 
 void print_binary(unsigned long int n)
 {
-	int i, arr[64];
+	int shift;
+	unsigned long int l;
 
 	if (n == 0)
 	{
-		printf("0");
+		_putchar('0');
 		return;
 	}
 
-	for (i = 0; n != 0; i++)
+	for (l = n, shift = 0; (l >>= 1) > 0; shift++)
+		;
+
+	for (; shift >= 0; shift--)
 	{
-		arr[i] = n % 2;
-		n = n / 2;
+		if ((n >> shift) & 1)
+			printf("1");
+		else
+			printf("0");
 	}
-
-	i--;
-
-	for ( ; i >= 0; i--)
-		printf("%d", arr[i]);
 }
