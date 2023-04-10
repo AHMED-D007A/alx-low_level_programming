@@ -22,8 +22,6 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (i >= 1)
 			power *= 2;
-		else
-			power += 1;
 		if (b[lenth] == '1')
 			converted += power;
 	}
