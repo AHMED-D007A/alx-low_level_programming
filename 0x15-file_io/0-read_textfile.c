@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include "main.h"
+#include <stdlib.h>
 /**
  * read_textfile - a function that reads a text file and prints it
  * @filename: the address of the file
@@ -14,7 +15,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t con1, n;
 	int fd;
-	char buffer[letters];
+	char *buffer;
 
 	if (filename == NULL)
 		return (0);
@@ -23,6 +24,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (fd < 0)
 		return (0);
+
+	buffer = malloc(sizeof(size_t) * letters);
 
 	if (buffer == NULL)
 		return (0);
