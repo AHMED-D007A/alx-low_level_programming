@@ -8,7 +8,7 @@
 
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	int lenth, i, l, arr[64];
+	int lenth, i, arr[64];
 	unsigned long int power;
 
 	if (index > 64)
