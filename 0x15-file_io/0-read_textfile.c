@@ -15,7 +15,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	size_t con1, con2, fd;
 	char buffer[letters];
 
-	fd = open(filename, O_RDONLY)
+	fd = open(filename, O_RDONLY);
 
 	if (fd < 0)
 		return (0);
@@ -31,9 +31,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 		return (0);
 
-	n = write(STDOUT_FILENO, buffer, letters);
+	n = write(STDOUT_FILENO, buffer, con1);
 
-	if (n == -1 || n != letters)
+	if (n == -1 || n != con1)
 		return (0);
 
 	close(fd);
