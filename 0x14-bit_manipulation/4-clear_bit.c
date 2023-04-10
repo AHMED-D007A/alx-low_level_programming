@@ -21,7 +21,6 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	}
 
 	lenth--;
-	l = lenth;
 	arr[index] = 0;
 
 	for (i = 0, power = 1; lenth != -1; i++, lenth--)
