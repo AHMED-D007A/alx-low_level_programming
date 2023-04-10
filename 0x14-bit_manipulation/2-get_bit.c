@@ -10,11 +10,8 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int i, arr[64];
 
-	if (n == 0)
-	{
-		printf("0");
-		return;
-	}
+	if (index > 64)
+		return (-1);
 
 	for (i = 0; n != 0; i++)
 	{
