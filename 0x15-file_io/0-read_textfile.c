@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include "main.h"
 /**
  * read_textfile - a function that reads a text file and prints it
  * @filename: the address of the file
@@ -12,23 +13,23 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t n;
-	size_t con1, con2, fd;
+	size_t con1, fd;
 	char buffer[letters];
 
-	fd = open(filename, O_RDONLY);
+	if (filename == NULL)
+		return (0);
+
+	fd = open(filename, O_RDWR);
 
 	if (fd < 0)
+		return (0);
+
+	if (buffer == NULL)
 		return (0);
 
 	con1 = read(fd, buffer, letters);
 
 	if (con1 < 0)
-		return (0);
-
-	if (filename == NULL)
-		return (0);
-
-	if (buffer == NULL)
 		return (0);
 
 	n = write(STDOUT_FILENO, buffer, con1);
