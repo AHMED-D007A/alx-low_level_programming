@@ -25,9 +25,10 @@ NEW:
 				return (0);
 			nodde->key = malloc(sizeof(char));
 			nodde->value = malloc(sizeof(char));
-			nodde->next = NULL;
 			nodde->key = (char *)key;
 			nodde->value = (char *)value;
+			nodde->next = ht->array[indx] ? ht->array[indx] : NULL;
+			ht->array[indx] = nodde;
 			return (1);
 		}
 CMP:
