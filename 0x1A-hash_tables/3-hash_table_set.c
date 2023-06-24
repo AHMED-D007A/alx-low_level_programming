@@ -25,8 +25,8 @@ NEW:
 				return (0);
 			nodde->key = malloc(sizeof(char));
 			nodde->value = malloc(sizeof(char));
-			nodde->key = (char *)key;
-			nodde->value = (char *)value;
+			nodde->key = strdup(key);
+			nodde->value = strdup(value);
 			nodde->next = ht->array[indx] ? ht->array[indx] : NULL;
 			ht->array[indx] = nodde;
 			return (1);
@@ -37,7 +37,7 @@ CMP:
 			if (nodde->value == NULL)
 				return (0);
 			free(nodde->value);
-			nodde->value = (char *)value;
+			nodde->value = strdup(value);
 			return (1);
 		}
 		else
