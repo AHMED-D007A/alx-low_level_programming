@@ -5,6 +5,7 @@
  * @ht: the given table.
  * @key: the given key to add or to update it.
  * @value: the value of the given key.
+ * Return: 1 on success, 0 otherwise.
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
