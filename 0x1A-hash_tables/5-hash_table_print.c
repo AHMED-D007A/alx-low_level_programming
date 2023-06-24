@@ -6,7 +6,7 @@
 */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int size, i;
+	unsigned long int size, i, check = 1;
 	hash_node_t *nodde = NULL;
 	char *k, *v;
 
@@ -19,12 +19,13 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		if (ht->array[i])
 		{
+			if (!check)
+				printf(", ");
 			nodde = ht->array[i];
 			k = strdup(nodde->key);
 			v = strdup(nodde->value);
 			printf("'%s': '%s'", k, v);
-			if (!(ht->array[i]))
-				printf(", ");
+			check = 0;
 		}
 	}
 	printf("}\n");
