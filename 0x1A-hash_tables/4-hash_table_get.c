@@ -20,8 +20,15 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (nodde == NULL)
 		return (NULL);
 
+	if (!strcmp(key, nodde->key))
+	{
 	if (nodde->value == NULL)
 		return (NULL);
+	return (nodde->value);
+	}
+
+	else
+		nodde = nodde->next;
 
 	return (nodde->value);
 }
