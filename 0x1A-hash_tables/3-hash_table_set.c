@@ -23,8 +23,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (nodde == NULL)
 		{
 			nodde = malloc(sizeof(hash_node_t));
+			nodde->key = (char *)key;
+			nodde->value = (char *)value;
 		}
-		else if (strcmp(key, nodde->key))
+CMP:
+		if (strcmp(key, nodde->key))
 		{
 			if (nodde->value == NULL)
 				return (0);
@@ -34,13 +37,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		else
 		{
 			nodde = nodde->next;
+			while (nodde != NULL)
+				goto CMP;
 			if (nodde == NULL)
 			{
 				nodde = malloc(sizeof(hash_node_t));
+				nodde->key = (char *)key;
+				nodde->value = (char *)value;
 			}
 		}
-		nodde->key = (char *)key;
-		nodde->value = (char *)value;
 	}
 
 	return (1);
