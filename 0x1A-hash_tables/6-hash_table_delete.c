@@ -1,5 +1,9 @@
 #include "hash_tables.h"
 
+/**
+ * rm_next_nodde - free the linked noddes in every hash.
+ * @nodde:the head of the list.
+*/
 void rm_next_nodde(hash_node_t *nodde)
 {
 	if (nodde->next)
@@ -23,7 +27,7 @@ void hash_table_delete(hash_table_t *ht)
 	if (!ht)
 		return;
 
-	for(i = 0; i < ht->size; i++)
+	for (i = 0; i < ht->size; i++)
 	{
 		nodde = ht->array[i];
 		if (nodde)
