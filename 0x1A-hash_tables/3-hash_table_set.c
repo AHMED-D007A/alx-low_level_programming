@@ -14,10 +14,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht || !key || !value || strlen(key) == 0)
 		return (0);
+
 	indx = key_index((const unsigned char *)key, ht->size);
 	nodde = ht->array[indx];
-	while (nodde)
-	{
 NEW:
 		if (nodde == NULL)
 		{
@@ -29,12 +28,14 @@ NEW:
 			nodde->next = NULL;
 			nodde->key = (char *)key;
 			nodde->value = (char *)value;
+			return (1);
 		}
 CMP:
 		if (!strcmp(key, nodde->key))
 		{
 			if (nodde->value == NULL)
 				return (0);
+			free(nodde->value);
 			nodde->value = (char *)value;
 			return (1);
 		}
@@ -45,7 +46,6 @@ CMP:
 				goto CMP;
 			goto NEW;
 		}
-	}
 
 	return (1);
 }
