@@ -27,6 +27,8 @@ void hash_table_print(const hash_table_t *ht)
 			printf("'%s': '%s'", k, v);
 			check = 0;
 			nodde = nodde->next;
+			free(v);
+			free(k);
 		}
 	}
 	printf("}\n");

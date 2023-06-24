@@ -23,8 +23,6 @@ NEW:
 			nodde = malloc(sizeof(hash_node_t));
 			if (nodde == NULL)
 				return (0);
-			nodde->key = malloc(sizeof(char));
-			nodde->value = malloc(sizeof(char));
 			nodde->key = strdup(key);
 			nodde->value = strdup(value);
 			nodde->next = ht->array[indx] ? ht->array[indx] : NULL;
