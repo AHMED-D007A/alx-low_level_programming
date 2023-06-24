@@ -20,18 +20,28 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	while (nodde)
 	{
+		if (nodde == NULL)
+		{
+			nodde = malloc(sizeof(hash_node_t));
+		}
 		if (strcmp(key, nodde->key))
 		{
+			if (nodde->value == NULL)
+				return (0);
 			nodde->value = (char *)value;
 			return (1);
 		}
 		else
 		{
 			nodde = nodde->next;
+			if (nodde == NULL)
+			{
+				nodde = malloc(sizeof(hash_node_t));
+			}
 		}
 		nodde->key = (char *)key;
 		nodde->value = (char *)value;
 	}
 
-		return (1);
+	return (1);
 }
