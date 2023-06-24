@@ -24,7 +24,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			nodde = malloc(sizeof(hash_node_t));
 		}
-		if (strcmp(key, nodde->key))
+		else if (strcmp(key, nodde->key))
 		{
 			if (nodde->value == NULL)
 				return (0);
