@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 """return the perimeter of the island described in grid"""
 
 
