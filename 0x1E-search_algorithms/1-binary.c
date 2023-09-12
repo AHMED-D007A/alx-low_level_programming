@@ -16,11 +16,10 @@ int _binary_search(int *array, int value, size_t first, size_t last)
 	for (i = first + 1; i <= last; i++)
 		printf(", %d", array[i]);
 	putchar('\n');
-
 	if (array[mid] == value)
 		return (mid);
-	else if (first > last)
-                return (-1);
+	else if (first >= last)
+		return (-1);
 	else if (array[mid] > value)
 		return (_binary_search(array, value, first, mid - 1));
 	else
