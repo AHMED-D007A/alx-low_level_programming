@@ -22,10 +22,8 @@ int _binary_search(int *array, int value, size_t first, size_t last)
 		return (mid);
 	else if (array[mid] > value)
 		return (_binary_search(array, value, first, mid - 1));
-	else if (array[mid] < value)
+	else
 		return (_binary_search(array, value, mid + 1, last));
-
-	return (-1);
 }
 
 /**
